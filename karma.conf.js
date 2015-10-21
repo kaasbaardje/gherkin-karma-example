@@ -24,6 +24,7 @@ module.exports = function (config) {
         },
 
         reporters: ['mocha', 'progress'],
+        // reporters: ['mocha', 'progress'],
         port: 9999,
         colors: true,
         logLevel: config.LOG_INFO,

@@ -7,12 +7,12 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js"
+    "test": "karma start karma.conf.js"
   },
-  "author": "Zach Pratt",
+  "author": "kaasbaardje",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zpratt/yadda-karma-example.git"
+    "url": "https://github.com/kaasbaardje/yadda-karma-example.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -28,6 +28,7 @@
     "karma-sinon": "^1.0.3",
     "mocha": "^1.20.1",
     "sinon": "^1.10.2",
-    "yadda": "^0.10.13"
+    "yadda": "^0.10.13",
+    "gherkin-Yadda": "*"
   }
 }

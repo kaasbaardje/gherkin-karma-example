@@ -3,6 +3,6 @@ Feature: Create a thought
   to be able to receive a list of the ones I have created.
   Scenario: Author a thought
 
-    Given An authenticated user
-    When a GET request on /thought is performed
-    Then a thought is returned
+    given An authenticated user
+    when a GET request on /thought is performed
+    then a thought is returned
