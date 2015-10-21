@@ -1,4 +1,4 @@
-var library = require('../features/step_definitions/example.step.js'),
+var library = require('../../lib/yaddaLibrary.js'),
 	expect = require('chai').expect;
 
 // given An authenticated user
@@ -15,6 +15,5 @@ library.when(/a GET request on \/thought is performed/, function(done) {
 library.then(/a thought is returned/, function(done) {
     done();
 });
-
 
 module.exports = library;

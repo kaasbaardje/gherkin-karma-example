@@ -1,4 +1,4 @@
-module.export = (function() {
+(function() {
     'use strict';
     var $ = require('jquery');
 
@@ -10,8 +10,7 @@ module.export = (function() {
         English = Yadda.localisation.English,
         FeatureParser = Yadda.parsers.FeatureParser,
         parser = new FeatureParser(English),
-        steps = require('./steps/example-steps.js'),
-        // steps = require('./features/steps/example-steps.js'),
+        steps = require('./features/step_definitions/example-steps.js'),
         yadda = new Yadda.Yadda(steps),
         loaderFeature = $.get('base/test/features/example.feature').responseText,
         feature = parser.parse(loaderFeature);
@@ -25,3 +24,4 @@ module.export = (function() {
         async: true
     });
 }());
+module.exporte = "asd";

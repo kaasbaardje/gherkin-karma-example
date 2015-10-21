@@ -4,7 +4,7 @@ module.exports = function (config) {
         frameworks: ['mocha', 'chai', 'sinon', 'browserify'],
 
         files: [
-            'test/features/step_definitions/*.step.js',
+            'test/features/step_definitions/*-steps.js',
             {pattern: 'test/features/*.feature', included: false}
         ],
 
@@ -14,13 +14,13 @@ module.exports = function (config) {
             debug: true,
             files: [
                 'test/test.spec.js',
-                'test/features/step_definitions/*.step.js'
+                'test/features/step_definitions/*-steps.js'
             ]
         },
 
         preprocessors: {
             'test/test.spec.js': 'browserify',
-            'test/features/step_definitions/*.step.js': 'browserify'
+            'test/features/step_definitions/*-steps.js': 'browserify'
         },
 
         reporters: ['mocha', 'progress'],
