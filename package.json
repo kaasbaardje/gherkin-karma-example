@@ -2,7 +2,6 @@
   "name": "yadda-karma",
   "version": "0.0.3",
   "description": "Example of integrating yadda and karma",
-  "main": "index.js",
   "engines": {
     "node": "0.10.x"
   },
@@ -18,17 +17,21 @@
   "devDependencies": {
     "browserify": "^4.1.9",
     "chai": "^1.9.1",
+    "gherkin-yadda": "*",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.5.0",
     "jquery": "~2.1.0",
     "karma": "^0.12.16",
     "karma-browserifast": "^0.6.1",
     "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.1.3",
     "karma-mocha-reporter": "^0.2.5",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sinon": "^1.0.3",
     "mocha": "^1.20.1",
     "sinon": "^1.10.2",
-    "yadda": "^0.10.13",
-    "gherkin-Yadda": "*"
+    "yadda": "^0.10.13"
   }
 }

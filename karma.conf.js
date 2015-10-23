@@ -24,7 +24,6 @@ module.exports = function (config) {
         },
 
         reporters: ['mocha', 'progress'],
-        // reporters: ['mocha', 'progress'],
         port: 9999,
         colors: true,
         logLevel: config.LOG_INFO,
@@ -34,11 +33,15 @@ module.exports = function (config) {
             'karma-chai',
             'karma-mocha',
             'karma-phantomjs-launcher',
+            'karma-firefox-launcher',
+            'karma-chrome-launcher',
             'karma-browserifast',
             'karma-sinon',
             'karma-mocha-reporter'
         ],
 
+        // browsers: ['Chrome']
+        // browsers: ['Firefox']
         browsers: ['PhantomJS']
     });
 };

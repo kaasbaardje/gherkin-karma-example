@@ -1,19 +1,25 @@
-var library = require('../../lib/yaddaLibrary.js'),
-	expect = require('chai').expect;
+'use strict';
 
-// given An authenticated user
-library.given(/An authenticated user/, function(done) {
+var expect = require('chai').expect;
+var Yadda = require('yadda'),
+	English = Yadda.localisation.English,
+	dictionary = new Yadda.Dictionary()
+		.define('number', /(d+)/),
+	steps = English.library(dictionary);
+
+// Given I am a registered user
+steps.given(/I am a registered user/, function(done) {
     done();
 });
 
-// when a GET request on /thought is performed
-library.when(/a GET request on \/thought is performed/, function(done) {
+// When I enter my credentials and submit the login form
+steps.when(/I enter my credentials and submit the login form/, function(done) {
     done();
 });
 
-// then a thought is returned
-library.then(/a thought is returned/, function(done) {
+// Then I should see a welcome page
+steps.then(/I should see a welcome page/, function(done) {
     done();
 });
 
-module.exports = library;
+module.exports = steps;

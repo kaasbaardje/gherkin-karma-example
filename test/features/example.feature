@@ -1,8 +1,9 @@
-Feature: Create a thought
-  As a person with a thought, I would like
-  to be able to receive a list of the ones I have created.
-  Scenario: Author a thought
+Feature: Login
+  In order to access the application
+  As a registered user
+  I need to be able to log in
+  Scenario: Successful login
 
-    given An authenticated user
-    when a GET request on /thought is performed
-    then a thought is returned
+    Given I am a registered user
+    When I enter my credentials and submit the login form
+    Then I should see a welcome page

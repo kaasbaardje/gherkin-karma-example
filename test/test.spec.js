@@ -1,4 +1,4 @@
-(function() {
+module.exports = (function() {
     'use strict';
     var $ = require('jquery');
 
@@ -24,4 +24,3 @@
         async: true
     });
 }());
-module.exporte = "asd";
