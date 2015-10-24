@@ -9,7 +9,7 @@ var Yadda = require('yadda'),
 
 // Given I am a registered user
 steps.given(/I am a registered user/, function(done) {
-    done();
+    // done();
 });
 
 // When I enter my credentials and submit the login form

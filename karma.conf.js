@@ -5,28 +5,24 @@ module.exports = function (config) {
 
         files: [
             'test/features/step_definitions/*-steps.js',
+            'test/test.spec.js',
             {pattern: 'test/features/*.feature', included: false}
         ],
 
         exclude: [],
 
-        browserify: {
-            debug: true,
-            files: [
-                'test/test.spec.js',
-                'test/features/step_definitions/*-steps.js'
-            ]
-        },
+        browserify: {},
 
         preprocessors: {
             'test/test.spec.js': 'browserify',
             'test/features/step_definitions/*-steps.js': 'browserify'
         },
 
-        reporters: ['mocha', 'progress'],
+        reporters: ['mocha'/*, 'html'*/],
         port: 9999,
         colors: true,
         logLevel: config.LOG_INFO,
+        autoWatch: false,
         singleRun: true,
 
         plugins: [
@@ -35,9 +31,11 @@ module.exports = function (config) {
             'karma-phantomjs-launcher',
             'karma-firefox-launcher',
             'karma-chrome-launcher',
-            'karma-browserifast',
+            'karma-chrome-launcher',
+            'karma-browserify',
             'karma-sinon',
-            'karma-mocha-reporter'
+            /*'karma-html-reporter'*/
+            'karma-mocha-reporter',
         ],
 
         // browsers: ['Chrome']

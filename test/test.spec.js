@@ -1,26 +1,35 @@
 module.exports = (function() {
     'use strict';
+
     var $ = require('jquery');
 
-    $.ajaxSetup({
-        async: false
-    });
-
     var Yadda = require('yadda'),
-        English = Yadda.localisation.English,
+        yaddaStepLibrary = require('./features/step_definitions/example-steps.js'),
+        yaddaInterpreter = Yadda.createInstance(yaddaStepLibrary),
+
         FeatureParser = Yadda.parsers.FeatureParser,
+        English = Yadda.localisation.English,
         parser = new FeatureParser(English),
-        steps = require('./features/step_definitions/example-steps.js'),
-        yadda = new Yadda.Yadda(steps),
-        loaderFeature = $.get('base/test/features/example.feature').responseText,
-        feature = parser.parse(loaderFeature);
 
-    Yadda.plugins.mocha.AsyncScenarioLevelPlugin.init();
+        loadedFeature = $.ajax({
+            url: 'base/test/features/example.feature',
+            async: false
+        }).responseText,
+        feature = parser.parse(loadedFeature);
 
-    scenarios(feature.scenarios, function(scenario, done) {
-        yadda.yadda(scenario.steps, done);
-    });
-    $.ajaxSetup({
-        async: true
-    });
+    if (true) { /*steps are reported*/
+        /*each step is executed within it's own mocha 'it' function*/
+        Yadda.plugins.mocha.StepLevelPlugin.init();
+        scenarios(feature.scenarios, function(scenario) {
+            steps(scenario.steps, function(step, done) {
+                yaddaInterpreter.run(step, done);
+            });
+        });
+    } else { /*ony scenarios are reported*/
+        /*runs all of the steps for a given scenario within the same mocha 'it' function*/
+        Yadda.plugins.mocha.ScenarioLevelPlugin.init();
+        scenarios(feature.scenarios, function(scenario, done) {
+            yaddaInterpreter.run(scenario.steps, done);
+        });
+    }
 }());
