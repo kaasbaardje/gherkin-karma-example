@@ -1,26 +1,40 @@
-module.exports = function (config) {
+module.exports = function(config) {
     config.set({
         basePath: '',
         frameworks: ['mocha', 'chai', 'sinon', 'browserify'],
 
         files: [
-            'test/features/step_definitions/*-steps.js',
             'test/test.spec.js',
-            {pattern: 'test/features/*.feature', included: false}
+            // 'test/features/step_definitions/*-steps.js',
+            {
+                pattern: 'test/features/*.feature',
+                included: false
+            }
         ],
 
         exclude: [],
 
-        browserify: {},
+        browserify: {
+            transform: ['babelify', 'require-globify']
+        },
 
         preprocessors: {
             'test/test.spec.js': 'browserify',
-            'test/features/step_definitions/*-steps.js': 'browserify'
+            'test/features/step_definitions/*-steps.js': 'browserify',
+            'test/features/*.feature': 'gherkin_yadda'
         },
 
-        reporters: ['mocha'/*, 'html'*/],
+        gherkin_yaddaPreprocessor: {
+            displayOutputPath: true,
+            useChai : true,
+            useDefine: true,
+            generateFeatureBaseName: true
+        },
+
+        reporters: ['mocha' /*, 'html'*/ ],
         port: 9999,
         colors: true,
+        // logLevel: config.LOG_DISABLE,
         logLevel: config.LOG_INFO,
         autoWatch: false,
         singleRun: true,
@@ -36,6 +50,7 @@ module.exports = function (config) {
             'karma-sinon',
             /*'karma-html-reporter'*/
             'karma-mocha-reporter',
+            'karma-gherkin_yadda-preprocessor'
         ],
 
         // browsers: ['Chrome']
