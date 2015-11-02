@@ -32,7 +32,7 @@ npm test
 ```
 
 ## 5. Composition
-Most important packages were:
+Most important parts were:
 
  * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
  * [karma](https://www.npmjs.com/package/karma)
