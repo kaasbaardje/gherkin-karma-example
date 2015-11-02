@@ -32,7 +32,7 @@ npm test
 ```
 
 ## 5. Composition
-List of the used main frameworks:
+Most important packages were:
 
  * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
  * [karma](https://www.npmjs.com/package/karma)
