@@ -41,7 +41,7 @@ List of the used main frameworks:
  * [chai](https://www.npmjs.com/package/chai)
  * [sinon](https://www.npmjs.com/package/sinon)
 
-[infographic](https://raw.githubusercontent.com/kaasbaardje/gherkin-karma-example/master/infographic.png)
+![infographic](https://raw.githubusercontent.com/kaasbaardje/gherkin-karma-example/master/infographic.png)
 
 ## 6. Todo
 * Handling of gherkin feature context
