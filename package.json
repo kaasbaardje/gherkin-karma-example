@@ -1,7 +1,7 @@
 {
   "name": "gherkin-karma-example",
-  "description": "Example of integrating Gherkin into Karma through the help of Yadda.",
-  "version": "0.0.1",
+  "description": "Example of integrating Gherkin into karma through the help of yadda.",
+  "version": "0.0.2",
   "scripts": {
     "test": "karma start karma.conf.js"
   },
