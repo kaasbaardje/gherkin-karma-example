@@ -37,6 +37,7 @@ Most important parts were:
  * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
  * [karma](https://www.npmjs.com/package/karma)
  * [yadda](https://www.npmjs.com/package/yadda)
+ * [karma-gherkin_yadda-preprocessor](https://www.npmjs.com/package/karma-gherkin_yadda-preprocessor)
  * [mocha](https://www.npmjs.com/package/mocha)
  * [chai](https://www.npmjs.com/package/chai)
  * [sinon](https://www.npmjs.com/package/sinon)
