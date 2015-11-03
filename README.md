@@ -32,12 +32,12 @@ npm test
 ```
 
 ## 5. Composition
-Most important parts were:
+Most important parts are:
 
- * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
  * [karma](https://www.npmjs.com/package/karma)
- * [yadda](https://www.npmjs.com/package/yadda)
+ * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
  * [karma-gherkin_yadda-preprocessor](https://www.npmjs.com/package/karma-gherkin_yadda-preprocessor)
+ * [yadda](https://www.npmjs.com/package/yadda)
  * [mocha](https://www.npmjs.com/package/mocha)
  * [chai](https://www.npmjs.com/package/chai)
  * [sinon](https://www.npmjs.com/package/sinon)

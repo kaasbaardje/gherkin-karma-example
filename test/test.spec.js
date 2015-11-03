@@ -5,9 +5,17 @@ module.exports = (function() {
         path = require('path'),
         $ = require('jquery'),
         Yadda = require('yadda'),
-        yaddaStepLibs = require('./features/step_definitions/*steps.js', {mode: 'list'}),
-        featurePath = "",
-        stepLib = "";
+        yaddaStepLibs = require('./features/step_definitions/*steps.js', {
+            mode: 'list'
+        }),
+        featurePath,
+        stepLib,
+        FeatureParser = Yadda.parsers.FeatureParser,
+        English = Yadda.localisation.English,
+        parser = new FeatureParser(English),
+        loadedFeature,
+        feature;
+
 
     yaddaStepLibs.map(function(lib) {
         featurePath = lib.module.featureBaseName;
@@ -18,17 +26,12 @@ module.exports = (function() {
     });
 
     function runYaddaStepLibrary(featurePath, yaddaStepLibrary) {
-        var yaddaInterpreter = Yadda.createInstance(yaddaStepLibrary),
-
-            FeatureParser = Yadda.parsers.FeatureParser,
-            English = Yadda.localisation.English,
-            parser = new FeatureParser(English),
-
-            loadedFeature = $.ajax({
-                url: featurePath,
-                async: false
-            }).responseText,
-            feature = parser.parse(loadedFeature);
+        var yaddaInterpreter = Yadda.createInstance(yaddaStepLibrary);
+        loadedFeature = $.ajax({
+            url: featurePath,
+            async: false
+        }).responseText;
+        feature = parser.parse(loadedFeature);
 
         if (true) { /*steps are reported*/
             /*each step is executed within it's own mocha 'it' function*/

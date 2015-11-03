@@ -48,7 +48,7 @@ module.exports = function(config) {
             'karma-chrome-launcher',
             'karma-browserify',
             'karma-sinon',
-            /*'karma-html-reporter'*/
+            /*'karma-html-reporter,'*/
             'karma-mocha-reporter',
             'karma-gherkin_yadda-preprocessor'
         ],
