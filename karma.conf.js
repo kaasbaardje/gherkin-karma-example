@@ -5,7 +5,6 @@ module.exports = function(config) {
 
         files: [
             'test/test.spec.js',
-            // 'test/features/step_definitions/*-steps.js',
             {
                 pattern: 'test/features/*.feature',
                 included: false
@@ -15,13 +14,12 @@ module.exports = function(config) {
         exclude: [],
 
         browserify: {
-            transform: ['babelify', 'require-globify']
+            transform: ['require-globify']
         },
 
         preprocessors: {
-            'test/test.spec.js': 'browserify',
-            'test/features/step_definitions/*-steps.js': 'browserify',
-            'test/features/*.feature': 'gherkin_yadda'
+            'test/test.spec.js': 'browserify'
+            ,'test/features/*.feature': 'gherkin_yadda'
         },
 
         gherkin_yaddaPreprocessor: {
