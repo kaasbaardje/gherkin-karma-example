@@ -32,7 +32,7 @@ npm test
 ```
 
 ## 5. Composition
-Most important parts are:
+Most important parts are (order is based on process chain):
 
  * [karma](https://www.npmjs.com/package/karma)
  * [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)
