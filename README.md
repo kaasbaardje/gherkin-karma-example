@@ -46,11 +46,11 @@ Most important parts are (order is based on process chain):
 
 ## 6. Todo
 * Handling of gherkin feature context
-* Integration of webdriver
 * Yeoman Integration
 * Include German words for Gherkin
 * ES6 Support
-* Include karma module code coverage
+* Include karma module CodeFlower
+* Include karma module SonarQube
 
 ## Maintainer  
 

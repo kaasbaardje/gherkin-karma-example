@@ -26,7 +26,8 @@ module.exports = function(config) {
             displayOutputPath: true,
             useChai : true,
             useDefine: true,
-            generateFeatureBaseName: true
+            generateFeatureBaseName: true,
+            handleExistingFile: "merge"
         },
 
         reporters: ['mocha' /*, 'html'*/ ],
