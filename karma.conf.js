@@ -27,7 +27,7 @@ module.exports = function(config) {
             useChai : true,
             useDefine: true,
             generateFeatureBaseName: true,
-            handleExistingFile: "merge"
+            handleExistingFile: "overwrite"
         },
 
         reporters: ['mocha' /*, 'html'*/ ],

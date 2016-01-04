@@ -1,9 +1,6 @@
 'use strict';
 
-module.exports = {
-	yaddaStepLibrary: yaddaStepLibrary,
-	featureBaseName: 'example1.feature'
-};
+
 
 var expect = require('chai').expect;
 var Yadda = require('yadda'),
@@ -12,8 +9,8 @@ var Yadda = require('yadda'),
 		.define('number', /(d+)/),
 	yaddaStepLibrary = English.library(dictionary);
 
-// Given I am a registered user "Max"
-yaddaStepLibrary.given(/I am a registered user "$Max"/, function(input1, done) {
+// Given I am a registered user Henk
+yaddaStepLibrary.given(/I am a registered user Henk/, function(done) {
 
 });
 
@@ -27,3 +24,7 @@ yaddaStepLibrary.then(/I should see a welcome page/, function(done) {
 
 });
 
+module.exports = {
+	yaddaStepLibrary: yaddaStepLibrary,
+	featureBaseName: 'example1.feature'
+};
